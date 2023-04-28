@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영어 배우기</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="test1.css" />
+  </head>
+  <body class="has-background-primary-light">
+    <!-- 서비스화면 -->
+    
+    <div id="box">
+      <div id="timer" class="timer"></div>
+      <div class="count is-size-6">
+        <!-- js개발 완료시 제거 -->
+        <span id="ind">1</span>/<span id="maxQ">45</span>
+      </div>
+      <div class="container p-2">
+        <div class="sentence">
+          <!-- js개발 완료시 opacity: 1 제거 -->
+          <h1 class="title is-4 has-text-success" style="opacity: 1">
+            <!-- js개발 완료시 제거 -->
+            <span id="EnText">I exercise regularly</span>
+          </h1>
+          <h2 class="title is-5">
+            <!-- js개발 완료시 제거 -->
+            <span id="KoText"></span>나는 정기적으로 운동한다</span>
+          </h2>
+          <div>
+            <button class="button next is-medium is-primary mt-5" onclick="increaseNumber()">Next</button>
+          </div>
+          <div>
+            <!-- 영어문장이 보여질때는 disabled를 빼야함 -->
+            <button id="but" class="button translate mt-5 is-small is-text" disabled>
+              Translate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 데이터 로딩중일때 표시화면 -->
+    <div id="loading">
+      <div class="has-text-centered has-text-dark">loading..</div>
+    </div>
+    <script src="test1.js"></script>
+  </head>
+  </body>
+</html>
